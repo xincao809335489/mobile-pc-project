@@ -1,5 +1,7 @@
 # project
 
+基于vue-cli3 同一个项目集合pc跟移动，启动页面会检测设备切入不同的入口，且pc,移动不同的reset.css以及ui框架，互不影响
+
 ## Project setup
 ```
 npm install

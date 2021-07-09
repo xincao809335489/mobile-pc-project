@@ -4,7 +4,7 @@
  * @Author: congsir
  * @Date: 2021-07-08 10:45:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-07-08 18:18:33
+ * @LastEditTime: 2021-07-09 16:19:21
 -->
 <template>
   <div class="mobile">
@@ -20,6 +20,9 @@
         is-link
         @click.native="getDetail(item.title)"
       ></mt-cell>
+      <!-- 测试移动界面文本px单位的情况 -->
+      <div class="info">文本信息</div>
+      <!-- 测试移动界面文本px单位的情况 -->
       <mt-tabbar v-model="selected" class="footer">
         <mt-tab-item id="home">
           <i class="iconfont icon-shouye" />
@@ -93,13 +96,20 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "~assets/css/icon.less";
+@import "~assets/css/m-index.less";
 .mobile {
   /deep/ .setting {
     font-size: 19px;
   }
   .content {
     margin-top: 40px;
+    .info {
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      background: pink;
+      font-size: 20px;
+    }
     .footer {
       height: 44px;
       display: flex;
